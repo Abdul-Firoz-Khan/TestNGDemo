@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="Browser1" value="Firefox"/>
+    <parameter name="Author1" value="John"/>
+    <test name="Test">
+        <groups>
+            <define name="electricVehicles">
+                <include name="e-car"/>
+                <include name="e-bike"/>
+            </define>
+            <run>
+                <include name="electricVehicles"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Demo05_TestNG_Grouping"/>
+            <class name="Demo06_TestNG_Grouping"/>
+        </classes>
+    </test>
+
+
+</suite>
